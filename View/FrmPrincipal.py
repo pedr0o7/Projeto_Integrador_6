@@ -14,7 +14,7 @@ class Ui_FrmPrincipal(object):
         FrmPrincipal.setWindowModality(QtCore.Qt.NonModal)
         FrmPrincipal.resize(1051, 515)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/unknown.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/unknown.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         FrmPrincipal.setWindowIcon(icon)
         FrmPrincipal.setAutoFillBackground(False)
         FrmPrincipal.setStyleSheet("background-color:qlineargradient(spread:pad, x1:0.508, y1:0.727, x2:0.505, y2:1, stop:0 rgba(255, 255, 153, 255), stop:1 rgba(255, 255, 255, 255))")
@@ -49,7 +49,7 @@ class Ui_FrmPrincipal(object):
 "\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Aluguel_veiculo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Aluguel_veiculo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnAlugar.setIcon(icon1)
         self.btnAlugar.setIconSize(QtCore.QSize(40, 40))
         self.btnAlugar.setObjectName("btnAlugar")
@@ -76,7 +76,7 @@ class Ui_FrmPrincipal(object):
 "\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Cadastrar_cliente.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Cadastrar_cliente.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnCliente.setIcon(icon2)
         self.btnCliente.setIconSize(QtCore.QSize(30, 30))
         self.btnCliente.setObjectName("btnCliente")
@@ -102,7 +102,7 @@ class Ui_FrmPrincipal(object):
 "\n"
 "")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Cadastrar_veiculo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Cadastrar_veiculo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnVeiculo.setIcon(icon3)
         self.btnVeiculo.setIconSize(QtCore.QSize(40, 40))
         self.btnVeiculo.setObjectName("btnVeiculo")
@@ -128,7 +128,7 @@ class Ui_FrmPrincipal(object):
 "\n"
 "")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Lista_cliente.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Lista_cliente.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnListCliente.setIcon(icon4)
         self.btnListCliente.setIconSize(QtCore.QSize(30, 30))
         self.btnListCliente.setObjectName("btnListCliente")
@@ -154,7 +154,7 @@ class Ui_FrmPrincipal(object):
 "\n"
 "")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Lista_Veiculos.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Lista_Veiculos.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnListVeiculo.setIcon(icon5)
         self.btnListVeiculo.setIconSize(QtCore.QSize(30, 30))
         self.btnListVeiculo.setObjectName("btnListVeiculo")
@@ -180,7 +180,7 @@ class Ui_FrmPrincipal(object):
 "\n"
 "")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Lista_aluguel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Lista_aluguel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnListAluguel.setIcon(icon6)
         self.btnListAluguel.setIconSize(QtCore.QSize(30, 30))
         self.btnListAluguel.setObjectName("btnListAluguel")
@@ -189,7 +189,7 @@ class Ui_FrmPrincipal(object):
         self.lbImg.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.lbImg.setFrameShape(QtWidgets.QFrame.WinPanel)
         self.lbImg.setText("")
-        self.lbImg.setPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Logo_Meca.jpeg"))#Logo_Meca #Logo_uno_escada
+        self.lbImg.setPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Logo_Meca.jpeg"))#Logo_Meca #Logo_uno_escada
         self.lbImg.setAlignment(QtCore.Qt.AlignJustify|QtCore.Qt.AlignVCenter)
         self.lbImg.setObjectName("lbImg")
         FrmPrincipal.setCentralWidget(self.centralwidget)

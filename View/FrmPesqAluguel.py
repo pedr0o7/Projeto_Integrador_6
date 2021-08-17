@@ -106,7 +106,7 @@ class Ui_FrmPesqAluguel(object):
         FrmPesqAluguel.setObjectName("FrmPesqAluguel")
         FrmPesqAluguel.resize(540, 395)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Lista_aluguel_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Lista_aluguel_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         FrmPesqAluguel.setWindowIcon(icon)
         FrmPesqAluguel.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.508, y1:0.727, x2:0.505, y2:1, stop:0 rgba(255, 255, 153, 255), stop:1 rgba(255, 255, 255, 255))")
         self.groupBox = QtWidgets.QGroupBox(FrmPesqAluguel)
@@ -148,7 +148,7 @@ class Ui_FrmPesqAluguel(object):
 "\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Pesquisar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Pesquisar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnPesquisa.setIcon(icon1)
         self.btnPesquisa.setIconSize(QtCore.QSize(30, 30))
         self.btnPesquisa.setObjectName("btnPesquisa")
@@ -177,7 +177,7 @@ class Ui_FrmPesqAluguel(object):
 "}\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Devolver.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Devolver.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnDevolver.setIcon(icon2)
         self.btnDevolver.setIconSize(QtCore.QSize(30, 30))
         self.btnDevolver.setObjectName("btnDevolver")

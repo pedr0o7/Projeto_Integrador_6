@@ -126,7 +126,7 @@ class Ui_frmPesqVeiculos(object):
         frmPesqVeiculos.setObjectName("frmPesqVeiculos")
         frmPesqVeiculos.resize(820, 491)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Lista_Veiculos_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Lista_Veiculos_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         frmPesqVeiculos.setWindowIcon(icon)
         frmPesqVeiculos.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.508, y1:0.727, x2:0.505, y2:1, stop:0 rgba(255, 255, 153, 255), stop:1 rgba(255, 255, 255, 255))")
         self.groupBox = QtWidgets.QGroupBox(frmPesqVeiculos)
@@ -159,7 +159,7 @@ class Ui_frmPesqVeiculos(object):
 "\n"
 "")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Pesquisar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Pesquisar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnPesquisa.setIcon(icon)
         self.btnPesquisa.setIconSize(QtCore.QSize(30, 30))
         self.btnPesquisa.setObjectName("btnPesquisa")
@@ -194,7 +194,7 @@ class Ui_frmPesqVeiculos(object):
 "\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Alterar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Alterar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnAlterar_2.setIcon(icon1)
         self.btnAlterar_2.setIconSize(QtCore.QSize(35, 35))
         self.btnAlterar_2.setObjectName("btnAlterar_2")
@@ -219,7 +219,7 @@ class Ui_frmPesqVeiculos(object):
 "\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/lixeira.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/lixeira.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnExcluir.setIcon(icon2)
         self.btnExcluir.setIconSize(QtCore.QSize(30, 30))
         self.btnExcluir.setObjectName("btnExcluir")

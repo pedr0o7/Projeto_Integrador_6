@@ -86,7 +86,7 @@ class Ui_frmCliente(object):
         frmCliente.resize(532, 269)
         #Icone da pag
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Cadastrar_cliente_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens//Cadastrar_cliente_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         frmCliente.setWindowIcon(icon)
         #Background
         frmCliente.setStyleSheet("background-color:qlineargradient(spread:pad, x1:0.508, y1:0.727, x2:0.505, y2:1, stop:0 rgba(255, 255, 153, 255), stop:1 rgba(255, 255, 255, 255))")
@@ -156,7 +156,7 @@ class Ui_frmCliente(object):
 "\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Python-20210805T211248Z-001\Projeto_Python\Imagens/Salvar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Salvar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnSalvar.setIcon(icon1)
         self.btnSalvar.setIconSize(QtCore.QSize(35, 35))
         self.btnSalvar.setObjectName("btnSalvar")
