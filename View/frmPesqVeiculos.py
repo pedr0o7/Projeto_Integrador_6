@@ -257,6 +257,7 @@ class Ui_frmPesqVeiculos(object):
         self.retranslateUi(frmPesqVeiculos)
         QtCore.QMetaObject.connectSlotsByName(frmPesqVeiculos)
 
+        self.PesquisarTodosVeiculos()
         # BTN PESQUISAR CLICK #
         self.btnPesquisa.clicked.connect(lambda: self.PesquisarVeiculo(self.edtPesquisa_2.text(), self.cbPesquisa.currentText()))
         # BTN EXCLUIR CLICK

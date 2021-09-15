@@ -235,7 +235,8 @@ class Ui_FrmPesqAluguel(object):
 
         self.retranslateUi(FrmPesqAluguel)
         QtCore.QMetaObject.connectSlotsByName(FrmPesqAluguel)
-
+        
+        self.PesquisarTodosAluguel()
         # BTN PESQUISAR CLICK #
         self.btnPesquisa.clicked.connect(
             lambda: self.PesquisarAluguel(self.edtPesquisa.text(), self.cbPesquisa.currentText()))
