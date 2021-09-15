@@ -93,7 +93,7 @@ class Ui_frmVeiculos(object):
         frmVeiculos.setObjectName("frmVeiculos")
         frmVeiculos.resize(543, 318)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Cadastrar_veiculo_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./Imagens/Cadastrar_veiculo_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         frmVeiculos.setWindowIcon(icon)
         frmVeiculos.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.508, y1:0.727, x2:0.505, y2:1, stop:0 rgba(255, 255, 153, 255), stop:1 rgba(255, 255, 255, 255))")
         self.groupBox_2 = QtWidgets.QGroupBox(frmVeiculos)
@@ -122,7 +122,7 @@ class Ui_frmVeiculos(object):
 "\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Salvar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off) ####VER OUTRO MODO!!
+        icon1.addPixmap(QtGui.QPixmap("./Imagens/Salvar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off) ####VER OUTRO MODO!!
         self.btnSalvar.setIcon(icon1)
         self.btnSalvar.setIconSize(QtCore.QSize(35, 35))
         self.btnSalvar.setObjectName("btnSalvar")

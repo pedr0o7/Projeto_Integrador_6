@@ -173,7 +173,7 @@ class Ui_FrmAluguel(object):
         FrmAluguel.setObjectName("FrmAluguel")
         FrmAluguel.resize(521, 589)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Aluguel_veiculo_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Imagens/Aluguel_veiculo_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         FrmAluguel.setWindowIcon(icon)
         FrmAluguel.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.508, y1:0.727, x2:0.505, y2:1, stop:0 rgba(255, 255, 153, 255), stop:1 rgba(255, 255, 255, 255));")
         self.groupBox = QtWidgets.QGroupBox(FrmAluguel)
@@ -303,7 +303,7 @@ class Ui_FrmAluguel(object):
 "\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Pesquisar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("./Imagens/Pesquisar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnPesqVeic.setIcon(icon1)
         self.btnPesqVeic.setIconSize(QtCore.QSize(30, 30))
         self.btnPesqVeic.setObjectName("btnPesqVeic")
@@ -411,7 +411,7 @@ class Ui_FrmAluguel(object):
 "\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("D:\PyCharm\projetos\Projeto_Integrador_6\Imagens/Salvar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("./Imagens/Salvar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnSalvar.setIcon(icon2)
         self.btnSalvar.setIconSize(QtCore.QSize(35, 35))
         self.btnSalvar.setObjectName("btnSalvar")
