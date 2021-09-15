@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrmPrincipal</class>
+ <widget class="QMainWindow" name="FrmPrincipal">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1137</width>
+    <height>683</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Locadora de Veículos</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Imagens/FrmIcon_Car.png</normaloff>../Imagens/FrmIcon_Car.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:qlineargradient(spread:pad, x1:0.508, y1:0.727, x2:0.505, y2:1, stop:0 rgba(255, 255, 153, 255), stop:1 rgba(255, 255, 255, 255))</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>40</width>
+    <height>40</height>
+   </size>
+  </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>1137</width>
+     <height>683</height>
+    </size>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QPushButton" name="btnCliente">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+border-radius: 5px;
+background-color: rgb(20,20,20);
+color:rgb(200,200,200);
+font: 87 12pt &quot;Arial&quot;;
+}
+
+QPushButton:hover{ 
+background-color:rgb(0, 0, 0);
+color: rbg(200,200,200)
+}
+
+QPushButton:pressed{
+background-color:rgb(0,0,30);
+color:rbg(200,200,200)
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>Cadastrar Cliente</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../Imagens/Cadastrar_cliente.png</normaloff>../../Imagens/Cadastrar_cliente.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>35</width>
+            <height>35</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnListCliente">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+border-radius: 5px;
+background-color: rgb(20,20,20);
+color:rgb(200,200,200);
+font: 87 12pt &quot;Arial&quot;;
+}
+
+QPushButton:hover{ 
+background-color:rgb(0, 0, 0);
+color: rbg(200,200,200)
+}
+
+QPushButton:pressed{
+background-color:rgb(0,0,30);
+color:rbg(200,200,200)
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>Listar Clientes</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../Imagens/Lista_cliente.png</normaloff>../../Imagens/Lista_cliente.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnVeiculo">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+border-radius: 5px;
+background-color: rgb(20,20,20);
+color:rgb(200,200,200);
+font: 87 12pt &quot;Arial&quot;;
+}
+
+QPushButton:hover{ 
+background-color:rgb(0, 0, 0);
+color: rbg(200,200,200)
+}
+
+QPushButton:pressed{
+background-color:rgb(0,0,30);
+color:rbg(200,200,200)
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>Cadastrar Veículo</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../Imagens/Cadastrar_veiculo.png</normaloff>../../Imagens/Cadastrar_veiculo.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnAlugar">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+border-radius: 5px;
+background-color: rgb(20,20,20);
+color:rgb(200,200,200);
+font: 87 12pt &quot;Arial&quot;;
+}
+
+QPushButton:hover{ 
+background-color:rgb(0, 0, 0);
+color: rbg(200,200,200)
+}
+
+QPushButton:pressed{
+background-color:rgb(0,0,30);
+color:rbg(200,200,200)
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>Alugar Veículo</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../Imagens/Aluguel_veiculo.png</normaloff>../../Imagens/Aluguel_veiculo.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>70</width>
+            <height>60</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnListAluguel">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+border-radius: 5px;
+background-color: rgb(20,20,20);
+color:rgb(200,200,200);
+font: 87 12pt &quot;Arial&quot;;
+}
+
+QPushButton:hover{ 
+background-color:rgb(0, 0, 0);
+color: rbg(200,200,200)
+}
+
+QPushButton:pressed{
+background-color:rgb(0,0,30);
+color:rbg(200,200,200)
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>Listar Alugueis</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../Imagens/Lista_aluguel.png</normaloff>../../Imagens/Lista_aluguel.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnListVeiculo">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+border-radius: 5px;
+background-color: rgb(20,20,20);
+color:rgb(200,200,200);
+font: 87 12pt &quot;Arial&quot;;
+}
+
+QPushButton:hover{ 
+background-color:rgb(0, 0, 0);
+color: rbg(200,200,200)
+}
+
+QPushButton:pressed{
+background-color:rgb(0,0,30);
+color:rbg(200,200,200)
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>Listar Veículos</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../Imagens/Lista_Veiculos.png</normaloff>../../Imagens/Lista_Veiculos.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Imagens/Logo_uno_escada.jpeg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionCliente">
+   <property name="text">
+    <string>Cliente</string>
+   </property>
+  </action>
+  <action name="actionVe_culo">
+   <property name="text">
+    <string>Veículo</string>
+   </property>
+  </action>
+  <action name="actionAlugar">
+   <property name="text">
+    <string>Alugar Veículo</string>
+   </property>
+  </action>
+  <action name="actionCliente_2">
+   <property name="text">
+    <string>Clientes</string>
+   </property>
+  </action>
+  <action name="actionVe_culos">
+   <property name="text">
+    <string>Veículos</string>
+   </property>
+  </action>
+  <action name="actionAlugueis">
+   <property name="text">
+    <string>Alugueis</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
