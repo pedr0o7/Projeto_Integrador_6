@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['D:\\PyCharm\\projetos\\Projeto_Integrador_6'],
+             pathex=['E:\\Meus Documentos\\Documentos\\GitHub\\Projeto_Integrador_6'],
              binaries=[],
              datas=[],
              hiddenimports=[],
