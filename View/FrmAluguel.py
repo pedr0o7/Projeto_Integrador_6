@@ -172,8 +172,10 @@ class Ui_FrmAluguel(object):
     def setupUi(self, FrmAluguel):
         FrmAluguel.setObjectName("FrmAluguel")
         FrmAluguel.resize(521, 589)
+        FrmAluguel.setMaximumSize(QtCore.QSize(521, 589))
+        FrmAluguel.setMinimumSize(QtCore.QSize(521, 589))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Imagens/Aluguel_veiculo_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./Imagens/Aluguel_veiculo_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         FrmAluguel.setWindowIcon(icon)
         FrmAluguel.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.508, y1:0.727, x2:0.505, y2:1, stop:0 rgba(255, 255, 153, 255), stop:1 rgba(255, 255, 255, 255));")
         self.groupBox = QtWidgets.QGroupBox(FrmAluguel)

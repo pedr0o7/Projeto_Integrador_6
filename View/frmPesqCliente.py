@@ -92,6 +92,8 @@ class Ui_frmPesqCliente(object):
     def setupUi(self, frmPesqCliente):
         frmPesqCliente.setObjectName("frmPesqCliente")
         frmPesqCliente.resize(651, 504)
+        frmPesqCliente.setMaximumSize(QtCore.QSize(651, 504))
+        frmPesqCliente.setMinimumSize(QtCore.QSize(651, 504))
         icon0 = QtGui.QIcon()
         icon0.addPixmap(QtGui.QPixmap("./Imagens/Lista_cliente_preto.png"),QtGui.QIcon.Normal, QtGui.QIcon.Off)
         frmPesqCliente.setWindowIcon(icon0)

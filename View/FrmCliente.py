@@ -84,6 +84,8 @@ class Ui_frmCliente(object):
 
         frmCliente.setObjectName("frmCliente")
         frmCliente.resize(532, 269)
+        frmCliente.setMaximumSize(QtCore.QSize(532, 269))
+        frmCliente.setMinimumSize(QtCore.QSize(532, 269))
         #Icone da pag
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("./Imagens//Cadastrar_cliente_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)

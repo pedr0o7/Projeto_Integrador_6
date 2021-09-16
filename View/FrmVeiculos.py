@@ -92,6 +92,8 @@ class Ui_frmVeiculos(object):
     def setupUi(self, frmVeiculos, estado, codigoVeic):
         frmVeiculos.setObjectName("frmVeiculos")
         frmVeiculos.resize(543, 318)
+        frmVeiculos.setMaximumSize(QtCore.QSize(543, 318))
+        frmVeiculos.setMinimumSize(QtCore.QSize(543, 318))        
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("./Imagens/Cadastrar_veiculo_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         frmVeiculos.setWindowIcon(icon)

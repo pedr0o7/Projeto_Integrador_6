@@ -125,6 +125,8 @@ class Ui_frmPesqVeiculos(object):
     def setupUi(self, frmPesqVeiculos):
         frmPesqVeiculos.setObjectName("frmPesqVeiculos")
         frmPesqVeiculos.resize(820, 491)
+        frmPesqVeiculos.setMaximumSize(QtCore.QSize(820, 491))
+        frmPesqVeiculos.setMinimumSize(QtCore.QSize(820, 491))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("./Imagens/Lista_Veiculos_preto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         frmPesqVeiculos.setWindowIcon(icon)
