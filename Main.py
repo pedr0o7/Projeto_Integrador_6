@@ -8,7 +8,6 @@ if __name__ == "__main__":
     FrmPrincipal = QtWidgets.QMainWindow()
     ui = Ui_FrmPrincipal()
     ui.setupUi(FrmPrincipal)
-    FrmPrincipal.show()
+    FrmPrincipal.showMaximized()
     sys.exit(app.exec_())
-
 

@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from View.FrmAluguel import Ui_FrmAluguel
-from View.FrmCliente import Ui_frmCliente
+from View.FrmCliente import Ui_FrmCliente
 from View.FrmPesqAluguel import Ui_FrmPesqAluguel
 from View.FrmVeiculos import Ui_frmVeiculos
 from View.frmPesqCliente import Ui_frmPesqCliente
@@ -11,34 +11,26 @@ class Ui_FrmPrincipal(object):
         FrmPrincipal.setObjectName("FrmPrincipal")
         FrmPrincipal.setWindowModality(QtCore.Qt.WindowModal)
         FrmPrincipal.resize(1137, 683)
-
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("./Imagens/FrmIcon_Car.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./Imagens/unknown (1).ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         FrmPrincipal.setWindowIcon(icon)
-        FrmPrincipal.setIconSize(QtCore.QSize(40, 40))
-
         FrmPrincipal.setAutoFillBackground(False)
         FrmPrincipal.setStyleSheet("background-color:qlineargradient(spread:pad, x1:0.508, y1:0.727, x2:0.505, y2:1, stop:0 rgba(255, 255, 153, 255), stop:1 rgba(255, 255, 255, 255))")
-
+        FrmPrincipal.setIconSize(QtCore.QSize(40, 40))
         FrmPrincipal.setAnimated(False)
         FrmPrincipal.setDocumentMode(False)
         FrmPrincipal.setDockNestingEnabled(False)
         FrmPrincipal.setUnifiedTitleAndToolBarOnMac(True)
-
         self.centralwidget = QtWidgets.QWidget(FrmPrincipal)
         self.centralwidget.setMinimumSize(QtCore.QSize(1137, 683))
         self.centralwidget.setObjectName("centralwidget")
-
-
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
-
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setSpacing(6)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-
         self.btnCliente = QtWidgets.QPushButton(self.centralwidget)
         self.btnCliente.setMinimumSize(QtCore.QSize(0, 80))
         self.btnCliente.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -206,8 +198,13 @@ class Ui_FrmPrincipal(object):
         self.horizontalLayout.addLayout(self.horizontalLayout_3)
         self.gridLayout.addLayout(self.horizontalLayout, 1, 0, 1, 1)
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy)
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("./Imagens/Logo_uno_escada.jpeg"))
+        self.label_2.setPixmap(QtGui.QPixmap("./Imagens/Logo_Meca.jpeg"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.gridLayout.addWidget(self.label_2, 2, 0, 1, 1)
@@ -241,8 +238,8 @@ class Ui_FrmPrincipal(object):
         _translate = QtCore.QCoreApplication.translate
         FrmPrincipal.setWindowTitle(_translate("FrmPrincipal", "Locadora de Veículos"))
         self.btnCliente.setText(_translate("FrmPrincipal", "Cadastrar Cliente"))
-        self.btnListCliente.setText(_translate("FrmPrincipal", "Listar Clientes"))
         self.btnVeiculo.setText(_translate("FrmPrincipal", "Cadastrar Veículo"))
+        self.btnListCliente.setText(_translate("FrmPrincipal", "Listar Clientes"))
         self.btnAlugar.setText(_translate("FrmPrincipal", "Alugar Veículo"))
         self.btnListAluguel.setText(_translate("FrmPrincipal", "Listar Alugueis"))
         self.btnListVeiculo.setText(_translate("FrmPrincipal", "Listar Veículos"))
@@ -253,8 +250,7 @@ class Ui_FrmPrincipal(object):
         self.actionVe_culos.setText(_translate("FrmPrincipal", "Veículos"))
         self.actionAlugueis.setText(_translate("FrmPrincipal", "Alugueis"))
         self.actionSair.setText(_translate("FrmPrincipal", "Sair"))
-
-    # BTN ALUGUEL.CLICK
+# BTN ALUGUEL.CLICK
     def FrmAluguel_Click(self):
         self.frmAluguel = QtWidgets.QMainWindow()
         self.ui = Ui_FrmAluguel()
@@ -264,7 +260,7 @@ class Ui_FrmPrincipal(object):
     # BTNCLIENTE.CLICK
     def FrmCliente_Click(self):
         self.frmCliente = QtWidgets.QMainWindow()
-        self.ui = Ui_frmCliente()
+        self.ui = Ui_FrmCliente()
         self.ui.setupUi(self.frmCliente, 'inserir', None)
         self.frmCliente.show()
 
@@ -296,7 +292,6 @@ class Ui_FrmPrincipal(object):
         self.ui = Ui_FrmPesqAluguel()
         self.ui.setupUi(self.frmPesqAluguel)
         self.frmPesqAluguel.show()
-
 
 if __name__ == "__main__":
     import sys
