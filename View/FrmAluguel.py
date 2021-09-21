@@ -12,15 +12,15 @@ class Ui_FrmAluguel(object):
 
         DataAluguel = self.EdtDataAluguel.text()
         DataPrazo = self.EdtPrazo.text()
-        DataDevolucao = self.EdtDataDev.text()
+
         ValorAluguel = self.EdtValor.text()
         ValorMulta = self.EdtMulta.text()
         KmEntrada = self.EdtkmEntrada.text()
-        KmSaida = self.EdtKmSaida.text()
+
 
         aluguel = AluguelCTR
-        aluguel.CadastrarAluguel(self,DataAluguel, DataPrazo, DataDevolucao, ValorAluguel,
-                      ValorMulta, KmEntrada, KmSaida, codigoCli, codigoVeic)
+        aluguel.CadastrarAluguel(self,DataAluguel, DataPrazo, ValorAluguel,
+                      ValorMulta, KmEntrada, codigoCli, codigoVeic)
 
         msg = QtWidgets.QMessageBox()
         msg.setIcon(QtWidgets.QMessageBox.Information)
@@ -31,11 +31,11 @@ class Ui_FrmAluguel(object):
 
         self.EdtDataAluguel.setText('')
         self.EdtPrazo.setText('')
-        self.EdtDataDev.setText('')
+
         self.EdtValor.setText('')
         self.EdtMulta.setText('')
         self.EdtkmEntrada.setText('')
-        self.EdtKmSaida.setText('')
+
 
 
     def PesquisarTodosClientes(self):
@@ -181,7 +181,7 @@ class Ui_FrmAluguel(object):
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setStyleSheet("font: 87 10pt \"Arial\";")
+        self.groupBox.setStyleSheet("font: 87 12pt \"Arial\";")
         self.groupBox.setTitle("")
         self.groupBox.setObjectName("groupBox")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.groupBox)
@@ -228,7 +228,7 @@ class Ui_FrmAluguel(object):
         self.gridLayout_2.addWidget(self.EdtkmEntrada, 1, 4, 1, 1)
         self.gridLayout.addWidget(self.groupBox, 0, 0, 1, 1)
         self.groupBox_2 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_2.setStyleSheet("font: 87 10pt \"Arial\";")
+        self.groupBox_2.setStyleSheet("font: 87 12pt \"Arial\";")
         self.groupBox_2.setObjectName("groupBox_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.groupBox_2)
         self.gridLayout_3.setObjectName("gridLayout_3")
@@ -314,7 +314,7 @@ class Ui_FrmAluguel(object):
         self.gridLayout_3.addWidget(self.gridCliente, 2, 0, 1, 3)
         self.gridLayout.addWidget(self.groupBox_2, 1, 0, 1, 1)
         self.groupBox_3 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_3.setStyleSheet("font: 87 10pt \"Arial\";")
+        self.groupBox_3.setStyleSheet("font: 87 12pt \"Arial\";")
         self.groupBox_3.setObjectName("groupBox_3")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.groupBox_3)
         self.gridLayout_4.setObjectName("gridLayout_4")

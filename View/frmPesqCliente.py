@@ -103,13 +103,13 @@ class Ui_frmPesqCliente(object):
         self.gridLayout_2 = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setStyleSheet("font: 87 10pt \"Arial\"; background-color: qlineargradient(spread:pad, x1:0.508, y1:0.727, x2:0.505, y2:1, stop:0 rgba(255, 255, 153, 255), stop:1 rgba(255, 255, 255, 255))")
+        self.groupBox.setStyleSheet("font: 87 12pt \"Arial\"; background-color: qlineargradient(spread:pad, x1:0.508, y1:0.727, x2:0.505, y2:1, stop:0 rgba(255, 255, 153, 255), stop:1 rgba(255, 255, 255, 255))")
         self.groupBox.setObjectName("groupBox")
         self.gridLayout = QtWidgets.QGridLayout(self.groupBox)
         self.gridLayout.setObjectName("gridLayout")
         self.cbPesquisa = QtWidgets.QComboBox(self.groupBox)
         self.cbPesquisa.setMinimumSize(QtCore.QSize(100, 30))
-        self.cbPesquisa.setStyleSheet("font: 87 10pt \"Arial\";\n"
+        self.cbPesquisa.setStyleSheet("font: 87 12pt \"Arial\";\n"
 "background-color: rgb(255, 255, 255);\n"
 "")
         self.cbPesquisa.setObjectName("cbPesquisa")
@@ -151,7 +151,7 @@ class Ui_frmPesqCliente(object):
         self.btnPesquisa.setObjectName("btnPesquisa")
         self.gridLayout.addWidget(self.btnPesquisa, 0, 2, 1, 1)
         self.gridCliente = QtWidgets.QTableWidget(self.groupBox)
-        self.gridCliente.setStyleSheet("font: 87 10pt \"Arial\";\n"
+        self.gridCliente.setStyleSheet("font: 87 12pt \"Arial\";\n"
 "background-color: rgb(255, 255, 255);")
         self.gridCliente.setObjectName("gridCliente")
         self.gridCliente.setColumnCount(6)

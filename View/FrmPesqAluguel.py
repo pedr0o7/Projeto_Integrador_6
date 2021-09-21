@@ -178,7 +178,7 @@ class Ui_FrmPesqAluguel(object):
         self.horizontalLayout.addWidget(self.btnPesquisa)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.tableWidget_2 = QtWidgets.QTableWidget(self.centralwidget)
-        self.tableWidget_2.setStyleSheet("font: 87 10pt \"Arial\";\n"
+        self.tableWidget_2.setStyleSheet("font: 87 12pt \"Arial\";\n"
 "background-color: rgb(255, 255, 255);\n"
 "alternate-background-color: rgb(255, 255, 255);")
         self.tableWidget_2.setObjectName("tableWidget_2")

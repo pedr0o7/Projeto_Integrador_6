@@ -24,11 +24,16 @@ class Ui_FrmCliente(object):
         cpf = self.edtCPF.text()
         endereco = self.edtEndereco.text()
         email = self.edtEmail.text()
-        print(email)
         telefone = self.edtTelefone.text()
 
         Email = email.count("@")
+        cpf = cpf.replace(".","")
+        cpf = cpf.replace("-","")
         cpf_cnpj = validacpfcnpj.ValidaCpfCnpj(cpf)
+        telefone = telefone.replace("-","")
+        telefone = telefone.replace(" ","")
+        telefone = telefone.replace("(","")
+        telefone = telefone.replace(")","")
 
         if cpf_cnpj.valida():
             if Email == 1:

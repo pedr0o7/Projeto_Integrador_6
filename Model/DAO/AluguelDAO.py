@@ -57,7 +57,7 @@ class AluguelDAO:
             sql = "SELECT aluguel.*, cliente.nome FROM aluguel, cliente where aluguel.CodigoCli = Cliente.CodigoCli and CodigoVeic = " + valor
             query = QSqlQuery(sql)
         elif tipo=='Nome Cliente':
-            sql = "SELECT aluguel.*, cliente.nome FROM aluguel, cliente where aluguel.CodigoCli = Cliente.CodigoCli and Nome = '" + valor+"'"
+            sql = "SELECT aluguel.*, cliente.nome FROM aluguel, cliente where aluguel.CodigoCli = Cliente.CodigoCli and Nome like '" + valor+"%'"
             query = QSqlQuery(sql)
 
         return query
