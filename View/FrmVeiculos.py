@@ -105,7 +105,7 @@ class Ui_frmVeiculos(object):
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
         self.groupBox.setMinimumSize(QtCore.QSize(0, 310))
         self.groupBox.setMaximumSize(QtCore.QSize(16777215, 310))
-        self.groupBox.setStyleSheet("font: 87 10pt \"Arial\";")
+        self.groupBox.setStyleSheet("font: 87 12pt \"Arial\";")
         self.groupBox.setTitle("")
         self.groupBox.setObjectName("groupBox")
         self.gridLayout = QtWidgets.QGridLayout(self.groupBox)

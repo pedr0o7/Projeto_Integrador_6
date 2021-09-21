@@ -134,14 +134,14 @@ class Ui_frmPesqVeiculos(object):
         self.gridLayout_2 = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setStyleSheet("font: 87 10pt \"Arial\";")
+        self.groupBox.setStyleSheet("font: 87 12pt \"Arial\";")
         self.groupBox.setObjectName("groupBox")
         self.gridLayout = QtWidgets.QGridLayout(self.groupBox)
         self.gridLayout.setObjectName("gridLayout")
         self.cbPesquisa = QtWidgets.QComboBox(self.groupBox)
         self.cbPesquisa.setMinimumSize(QtCore.QSize(100, 30))
         self.cbPesquisa.setMaximumSize(QtCore.QSize(100, 30))
-        self.cbPesquisa.setStyleSheet("font: 87 10pt \"Arial\";\n"
+        self.cbPesquisa.setStyleSheet("font: 87 12pt \"Arial\";\n"
 "background-color: rgb(255, 255, 255);")
         self.cbPesquisa.setObjectName("cbPesquisa")
         self.cbPesquisa.addItem("")
@@ -186,7 +186,7 @@ class Ui_frmPesqVeiculos(object):
         self.gridVeiculos = QtWidgets.QTableWidget(self.groupBox)
         self.gridVeiculos.setStyleSheet("alternate-background-color: rgb(255, 255, 255);\n"
 "background-color: rgb(255, 255, 255);\n"
-"font: 87 10pt \"Arial\";")
+"font: 87 12pt \"Arial\";")
         self.gridVeiculos.setObjectName("gridVeiculos")
         self.gridVeiculos.setColumnCount(11)
         self.gridVeiculos.setRowCount(0)
