@@ -12,7 +12,7 @@ class Ui_FrmAluguel(object):
 
         DataAluguel = self.EdtDataAluguel.text()
         DataPrazo = self.EdtPrazo.text()
-
+        
         ValorAluguel = self.EdtValor.text()
         ValorMulta = self.EdtMulta.text()
         KmEntrada = self.EdtkmEntrada.text()
@@ -95,7 +95,44 @@ class Ui_FrmAluguel(object):
 
     def PesquisarVeiculo(self, valor, tipo):
         if (valor == '') :
-            self.PesquisarVeiculosDisponiveis()
+            if (tipo == 'Disponível' or tipo == 'Alugado'):
+                valor=' '
+                veiculo = VeiculoCTR
+                query = veiculo.PesquisarVeiculo(self,valor, tipo)
+
+                while (self.gridVeiculo.rowCount() > 0):
+                    self.gridVeiculo.removeRow(0)
+
+                row = 0
+                while query.next():
+                    self.gridVeiculo.insertRow(row)
+                    codigoVeic = QtWidgets.QTableWidgetItem(str(query.value(0)))
+                    modelo = QtWidgets.QTableWidgetItem(str(query.value(1)))
+                    marca = QtWidgets.QTableWidgetItem(str(query.value(2)))
+                    anoModelo = QtWidgets.QTableWidgetItem(str(query.value(3)))
+                    placa = QtWidgets.QTableWidgetItem(str(query.value(4)))
+                    alugado = QtWidgets.QTableWidgetItem(str(query.value(5)))
+                    batido = QtWidgets.QTableWidgetItem(str(query.value(6)))
+                    kmAtual = QtWidgets.QTableWidgetItem(str(query.value(7)))
+                    valorDiaria = QtWidgets.QTableWidgetItem(str(query.value(8)))
+                    descricao = QtWidgets.QTableWidgetItem(str(query.value(9)))
+                    tipoVeiculo = QtWidgets.QTableWidgetItem(str(query.value(10)))
+
+                    self.gridVeiculo.setItem(row, 0, codigoVeic)
+                    self.gridVeiculo.setItem(row, 1, modelo)
+                    self.gridVeiculo.setItem(row, 2, marca)
+                    self.gridVeiculo.setItem(row, 3, anoModelo)
+                    self.gridVeiculo.setItem(row, 4, placa)
+                    self.gridVeiculo.setItem(row, 5, alugado)
+                    self.gridVeiculo.setItem(row, 6, batido)
+                    self.gridVeiculo.setItem(row, 7, kmAtual)
+                    self.gridVeiculo.setItem(row, 8, valorDiaria)
+                    self.gridVeiculo.setItem(row, 9, descricao)
+                    self.gridVeiculo.setItem(row, 10, tipoVeiculo)
+
+                    row = row + 1
+            else:
+                self.PesquisarVeiculosDisponiveis()
         else:
             veiculo = VeiculoCTR
             query = veiculo.PesquisarVeiculo(self,valor, tipo)
@@ -232,6 +269,7 @@ class Ui_FrmAluguel(object):
         self.groupBox_2.setObjectName("groupBox_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.groupBox_2)
         self.gridLayout_3.setObjectName("gridLayout_3")
+
         self.btnPesqVeic = QtWidgets.QPushButton(self.groupBox_2)
         self.btnPesqVeic.setEnabled(True)
         self.btnPesqVeic.setMinimumSize(QtCore.QSize(120, 50))
@@ -405,12 +443,11 @@ class Ui_FrmAluguel(object):
         self.EdtPesqVeiculo.setObjectName("EdtPesqVeiculo")
         self.gridLayout_4.addWidget(self.EdtPesqVeiculo, 1, 1, 1, 1)
         self.gridLayout.addWidget(self.groupBox_3, 2, 0, 1, 1)
-        self.btnSalvar = QtWidgets.QPushButton(self.centralwidget)
-        self.btnSalvar.setEnabled(False)
+
+        self.btnSalvar = QtWidgets.QPushButton(self.groupBox)
         self.btnSalvar.setMinimumSize(QtCore.QSize(120, 50))
         self.btnSalvar.setMaximumSize(QtCore.QSize(120, 50))
         self.btnSalvar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btnSalvar.setAutoFillBackground(False)
         self.btnSalvar.setStyleSheet("QPushButton{\n"
 "border-radius: 5px;\n"
 "background-color: rgb(20,20,20);\n"
@@ -429,9 +466,9 @@ class Ui_FrmAluguel(object):
 "}\n"
 "\n"
 "")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("./Imagens/Salvar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btnSalvar.setIcon(icon2)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("./Imagens/Salvar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btnSalvar.setIcon(icon1)
         self.btnSalvar.setIconSize(QtCore.QSize(35, 35))
         self.btnSalvar.setObjectName("btnSalvar")
         self.gridLayout.addWidget(self.btnSalvar, 3, 0, 1, 1, QtCore.Qt.AlignRight)

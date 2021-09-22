@@ -15,15 +15,15 @@ class AluguelDAO:
         db.commit()
 
         query.prepare("INSERT INTO Aluguel(DataAluguel, DataPrazo, DataDevolucao, ValorAluguel, "
-                      "ValorMulta, KmEntrada, KmSaida, CodigoCli, CodigoVeic) "
+                      "ValorMulta, KmEntrada, KmSaida, CodigoCli_, CodigoVeic_) "
                       "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")
         query.addBindValue(aluguel.DataAluguel)
         query.addBindValue(aluguel.DataPrazo)
-        query.addBindValue(aluguel.DataDevolucao)
+        query.addBindValue(None)
         query.addBindValue(aluguel.ValorAluguel)
         query.addBindValue(aluguel.ValorMulta)
         query.addBindValue(aluguel.KmEntrada)
-        query.addBindValue(aluguel.KmSaida)
+        query.addBindValue(None)
         query.addBindValue(aluguel.CodigoCli)
         query.addBindValue(aluguel.CodigoVeic)
         query.exec_()
@@ -37,7 +37,7 @@ class AluguelDAO:
 
         db.open()
 
-        sql = "SELECT aluguel.*, cliente.nome FROM aluguel, cliente where aluguel.CodigoCli = Cliente.CodigoCli"
+        sql = "SELECT CodigoAlug, DataAluguel,DataPrazo, DataDevolucao, printf('R$ %.2f', ValorAluguel) as 'ValorAluguel', printf('R$ %.2f', ValorMulta) AS 'ValorMulta', printf('%.3f', KmEntrada) AS 'KmEntrada', printf('%.3f', KmSaida) AS 'KmSaida',CodigoCli_, (CodigoVeic_ || ' - ' || Modelo) as 'CodigoVeic_',Nome as 'Nome' from Aluguel as a, Veiculo as v, Cliente as c WHERE a.CodigoVeic_ = v.CodigoVeic and a.CodigoCli_ = c.CodigoCli ORDER by CodigoAlug DESC;"
         query = QSqlQuery(sql)
 
         return query
@@ -48,16 +48,16 @@ class AluguelDAO:
         db.open()
 
         if tipo=='Código Aluguel':
-            sql = "SELECT aluguel.*, cliente.nome FROM aluguel, cliente where aluguel.CodigoCli = Cliente.CodigoCli and CodigoAlug = " + valor
+            sql = "SELECT CodigoAlug, DataAluguel,DataPrazo, DataDevolucao, printf('R$ %.2f', ValorAluguel) as 'ValorAluguel', printf('R$ %.2f', ValorMulta) AS 'ValorMulta', printf('%.3f', KmEntrada) AS 'KmEntrada', printf('%.3f', KmSaida) AS 'KmSaida',CodigoCli_, (CodigoVeic_ || ' - ' || Modelo) as 'CodigoVeic_',Nome as 'Nome' from Aluguel as a, Veiculo as v, Cliente as c WHERE a.CodigoVeic_ = v.CodigoVeic and a.CodigoCli_ = c.CodigoCli and CodigoAlug = " + valor
             query = QSqlQuery(sql)
         elif tipo=='Código Cliente':
-            sql = "SELECT aluguel.*, cliente.nome FROM aluguel, cliente where aluguel.CodigoCli = Cliente.CodigoCli and Cliente.CodigoCli = "+valor
+            sql = "SELECT CodigoAlug, DataAluguel,DataPrazo, DataDevolucao, printf('R$ %.2f', ValorAluguel) as 'ValorAluguel', printf('R$ %.2f', ValorMulta) AS 'ValorMulta', printf('%.3f', KmEntrada) AS 'KmEntrada', printf('%.3f', KmSaida) AS 'KmSaida',CodigoCli_, (CodigoVeic_ || ' - ' || Modelo) as 'CodigoVeic_',Nome as 'Nome' from Aluguel as a, Veiculo as v, Cliente as c WHERE a.CodigoVeic_ = v.CodigoVeic and a.CodigoCli_ = c.CodigoCli and CodigoCli_ = "+valor
             query = QSqlQuery(sql)
         elif tipo=='Código Veículo':
-            sql = "SELECT aluguel.*, cliente.nome FROM aluguel, cliente where aluguel.CodigoCli = Cliente.CodigoCli and CodigoVeic = " + valor
+            sql = "SELECT CodigoAlug, DataAluguel,DataPrazo, DataDevolucao, printf('R$ %.2f', ValorAluguel) as 'ValorAluguel', printf('R$ %.2f', ValorMulta) AS 'ValorMulta', printf('%.3f', KmEntrada) AS 'KmEntrada', printf('%.3f', KmSaida) AS 'KmSaida',CodigoCli_, (CodigoVeic_ || ' - ' || Modelo) as 'CodigoVeic_',Nome as 'Nome' from Aluguel as a, Veiculo as v, Cliente as c WHERE a.CodigoVeic_ = v.CodigoVeic and a.CodigoCli_ = c.CodigoCli and CodigoVeic_ = " + valor
             query = QSqlQuery(sql)
         elif tipo=='Nome Cliente':
-            sql = "SELECT aluguel.*, cliente.nome FROM aluguel, cliente where aluguel.CodigoCli = Cliente.CodigoCli and Nome like '" + valor+"%'"
+            sql = "SELECT CodigoAlug, DataAluguel,DataPrazo, DataDevolucao, printf('R$ %.2f', ValorAluguel) as 'ValorAluguel', printf('R$ %.2f', ValorMulta) AS 'ValorMulta', printf('%.3f', KmEntrada) AS 'KmEntrada', printf('%.3f', KmSaida) AS 'KmSaida',CodigoCli_, (CodigoVeic_ || ' - ' || Modelo) as 'CodigoVeic_',Nome as 'Nome' from Aluguel as a, Veiculo as v, Cliente as c WHERE a.CodigoVeic_ = v.CodigoVeic and a.CodigoCli_ = c.CodigoCli and Nome LIKE '"+valor+"%'"
             query = QSqlQuery(sql)
 
         return query
@@ -70,7 +70,7 @@ class AluguelDAO:
 
 
         select = "SELECT Veiculo.CodigoVeic FROM Aluguel"\
-                      " INNER JOIN Veiculo ON Aluguel.CodigoVeic = Veiculo.CodigoVeic"\
+                      " INNER JOIN Veiculo ON Aluguel.CodigoVeic_ = Veiculo.CodigoVeic"\
                       " WHERE Aluguel.CodigoAlug = "+codigoAlug
 
         query = QSqlQuery(select)
@@ -78,7 +78,7 @@ class AluguelDAO:
         while query.next():
             codigoVeic = str(query.value(0))
 
-        sql = "UPDATE Veiculo SET Alugado = 'Não' WHERE CodigoVeic = "+codigoVeic
+        sql = "UPDATE Veiculo SET Alugado = 'Não' WHERE CodigoVeic_ = "+codigoVeic
         query.prepare(sql)
         query.exec_()
         db.commit()

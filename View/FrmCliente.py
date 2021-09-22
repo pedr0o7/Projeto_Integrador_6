@@ -34,7 +34,8 @@ class Ui_FrmCliente(object):
         telefone = telefone.replace(" ","")
         telefone = telefone.replace("(","")
         telefone = telefone.replace(")","")
-
+        print(cpf)
+        print(telefone)
         if cpf_cnpj.valida():
             if Email == 1:
                 if len(telefone) >=11 and len(telefone)<16 :

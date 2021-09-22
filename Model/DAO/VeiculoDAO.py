@@ -56,7 +56,7 @@ class VeiculoDAO:
         db = conn.getConexao()
         db.open()
 
-        sql = "SELECT * FROM Veiculo WHERE Alugado = 'Não'"
+        sql = "select CodigoVeic, Modelo,  Marca, AnoModelo, Placa, Alugado, Batido, printf('%.3f', KmAtual) AS 'KmAtual', 	printf('R$ %.2f', ValorDiaria) as 'ValorDiaria', Descricao, TipoVeiculo FROM Veiculo WHERE Alugado = 'Não'"
         query = QSqlQuery(sql)
 
         return query
@@ -66,7 +66,7 @@ class VeiculoDAO:
         db = conn.getConexao()
         db.open()
 
-        sql = "SELECT * FROM Veiculo"
+        sql = "select CodigoVeic, Modelo,  Marca, AnoModelo, Placa, Alugado, Batido, printf('%.3f', KmAtual) AS 'KmAtual', 	printf('R$ %.2f', ValorDiaria) as 'ValorDiaria', Descricao, TipoVeiculo FROM Veiculo"
         query = QSqlQuery(sql)
 
         return query
@@ -77,19 +77,19 @@ class VeiculoDAO:
         db.open()
 
         if tipo=='Código':
-            sql = "SELECT * FROM Veiculo where CodigoVeic = " + valor
+            sql = "select CodigoVeic, Modelo,  Marca, AnoModelo, Placa, Alugado, Batido, printf('%.3f', KmAtual) AS 'KmAtual', 	printf('R$ %.2f', ValorDiaria) as 'ValorDiaria', Descricao, TipoVeiculo FROM Veiculo where CodigoVeic = " + valor
             query = QSqlQuery(sql)
         elif tipo=='Marca':
-            sql = "SELECT * FROM Veiculo where Marca = '"+valor+"'"
+            sql = "select CodigoVeic, Modelo,  Marca, AnoModelo, Placa, Alugado, Batido, printf('%.3f', KmAtual) AS 'KmAtual', 	printf('R$ %.2f', ValorDiaria) as 'ValorDiaria', Descricao, TipoVeiculo FROM Veiculo Veiculo where Marca LIKE '"+valor+"%'"
             query = QSqlQuery(sql)
         elif tipo=='Modelo':
-            sql = "SELECT * FROM Veiculo where Modelo = '"+valor+"'"
+            sql = "select CodigoVeic, Modelo,  Marca, AnoModelo, Placa, Alugado, Batido, printf('%.3f', KmAtual) AS 'KmAtual', 	printf('R$ %.2f', ValorDiaria) as 'ValorDiaria', Descricao, TipoVeiculo FROM Veiculo where Modelo LIKE '"+valor+"%'"
             query = QSqlQuery(sql)
         elif tipo=='Disponível':
-            sql = "SELECT * FROM Veiculo where Alugado = 'Não'"
+            sql = "select CodigoVeic, Modelo,  Marca, AnoModelo, Placa, Alugado, Batido, printf('%.3f', KmAtual) AS 'KmAtual', 	printf('R$ %.2f', ValorDiaria) as 'ValorDiaria', Descricao, TipoVeiculo FROM Veiculo where Alugado = 'Não'"
             query = QSqlQuery(sql)
         elif tipo=='Alugado':
-            sql = "SELECT * FROM Veiculo where Alugado = 'Sim'"
+            sql = "select CodigoVeic, Modelo,  Marca, AnoModelo, Placa, Alugado, Batido, printf('%.3f', KmAtual) AS 'KmAtual', 	printf('R$ %.2f', ValorDiaria) as 'ValorDiaria', Descricao, TipoVeiculo FROM Veiculo Veiculo where Alugado = 'Sim'"
             query = QSqlQuery(sql)
 
         return query

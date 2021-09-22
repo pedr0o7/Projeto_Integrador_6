@@ -48,7 +48,7 @@ class ClienteDAO:
         conn = ConexaoSQL
         db = conn.getConexao()
         db.open()
-        sql = "SELECT CodigoCli, Nome, printf('%.3d-%.3d-%.3d.%.2d',substr(CPF,1,3),substr(CPF,4,3), substr(CPF,7,3), substr(CPF,10,2)) as CPF, Endereco, Email, printf('(%.2d) %.1d %.4d-%.4d', substr(Telefone,1,2),substr(Telefone,3,1), substr(Telefone,4,4),substr(Telefone,8,4)) as TELEFONE FROM Cliente;"
+        sql = "SELECT CodigoCli, Nome, printf('%.3d.%.3d.%.3d-%.2d',substr(CPF,1,3),substr(CPF,4,3), substr(CPF,7,3), substr(CPF,10,2)) as CPF, Endereco, Email, printf('(%.2d) %.1d %.4d-%.4d', substr(Telefone,1,2),substr(Telefone,3,1), substr(Telefone,4,4),substr(Telefone,8,4)) as TELEFONE FROM Cliente;"
         query = QSqlQuery(sql)
 
         return query
@@ -61,14 +61,14 @@ class ClienteDAO:
         db.open()
 
         if tipo=='Código':
-            sql = "SELECT CodigoCli, Nome, printf('%.3d-%.3d-%.3d.%.2d',substr(CPF,1,3),substr(CPF,4,3), substr(CPF,7,3), substr(CPF,10,2)) as CPF, Endereco, Email, printf('(%.2d) %.1d %.4d-%.4d', substr(Telefone,1,2),substr(Telefone,3,1), substr(Telefone,4,4),substr(Telefone,8,4)) as TELEFONE FROM Cliente where CodigoCli = " + valor
+            sql = "SELECT CodigoCli, Nome, printf('%.3d.%.3d.%.3d-%.2d',substr(CPF,1,3),substr(CPF,4,3), substr(CPF,7,3), substr(CPF,10,2)) as CPF, Endereco, Email, printf('(%.2d) %.1d %.4d-%.4d', substr(Telefone,1,2),substr(Telefone,3,1), substr(Telefone,4,4),substr(Telefone,8,4)) as TELEFONE FROM Cliente where CodigoCli = " + valor
             query = QSqlQuery(sql)
         elif tipo=='Nome':
-            sql = "SELECT CodigoCli, Nome, printf('%.3d-%.3d-%.3d.%.2d',substr(CPF,1,3),substr(CPF,4,3), substr(CPF,7,3), substr(CPF,10,2)) as CPF, Endereco, Email, printf('(%.2d) %.1d %.4d-%.4d', substr(Telefone,1,2),substr(Telefone,3,1), substr(Telefone,4,4),substr(Telefone,8,4)) as TELEFONE FROM Cliente where Nome LIKE '"+valor+"%'"
+            sql = "SELECT CodigoCli, Nome, printf('%.3d.%.3d.%.3d-%.2d',substr(CPF,1,3),substr(CPF,4,3), substr(CPF,7,3), substr(CPF,10,2)) as CPF, Endereco, Email, printf('(%.2d) %.1d %.4d-%.4d', substr(Telefone,1,2),substr(Telefone,3,1), substr(Telefone,4,4),substr(Telefone,8,4)) as TELEFONE FROM Cliente where Nome LIKE '"+valor+"%'"
             query = QSqlQuery(sql)
         elif tipo=='CPF':
             
-            sql = "SELECT CodigoCli, Nome, printf('%.3d-%.3d-%.3d.%.2d',substr(CPF,1,3),substr(CPF,4,3), substr(CPF,7,3), substr(CPF,10,2)) as CPF, Endereco, Email, printf('(%.2d) %.1d %.4d-%.4d', substr(Telefone,1,2),substr(Telefone,3,1), substr(Telefone,4,4),substr(Telefone,8,4)) as TELEFONE FROM Cliente where CPF = '" + valor+"'"
+            sql = "SELECT CodigoCli, Nome, printf('%.3d.%.3d.%.3d-%.2d',substr(CPF,1,3),substr(CPF,4,3), substr(CPF,7,3), substr(CPF,10,2)) as CPF, Endereco, Email, printf('(%.2d) %.1d %.4d-%.4d', substr(Telefone,1,2),substr(Telefone,3,1), substr(Telefone,4,4),substr(Telefone,8,4)) as TELEFONE FROM Cliente where CPF = '" + valor+"'"
             query = QSqlQuery(sql)
 
         return query

@@ -19,10 +19,10 @@ class Ui_FrmPesqAluguel(object):
         dataDevol = self.edtDevolucao.text()
         valorMulta = self.edtMulta.text()
         kmSaida = self.edtSaida.text()
-
-        aluguelCTR = AluguelCTR
-        aluguelCTR.AluguelCTR.DevolverVeiculo(self, codigoAlug, dataDevol, valorMulta, kmSaida)
-
+        print("salve")
+        aluguel= AluguelCTR
+        aluguel.AluguelCTR.DevolverVeiculo(self, codigoAlug, dataDevol, valorMulta, kmSaida)
+        print("roia")
         msg = QtWidgets.QMessageBox()
         msg.setIcon(QtWidgets.QMessageBox.Information)
         msg.setText("Veículo devolvido!")

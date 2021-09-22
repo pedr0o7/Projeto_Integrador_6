@@ -2,16 +2,16 @@ from Model.DTO.AluguelDTO import AluguelDTO
 from Model.DAO.AluguelDAO import AluguelDAO
 
 class AluguelCTR:
-    def CadastrarAluguel(self,DataAluguel, DataPrazo, DataDevolucao, ValorAluguel,
-                      ValorMulta, KmEntrada, KmSaida, CodigoCli, CodigoVeic):
+    def CadastrarAluguel(self,DataAluguel, DataPrazo, ValorAluguel,
+                      ValorMulta, KmEntrada, CodigoCli, CodigoVeic):
         aluguelDTO = AluguelDTO
         aluguelDTO.DataAluguel = DataAluguel
         aluguelDTO.DataPrazo = DataPrazo
-        aluguelDTO.DataDevolucao = DataDevolucao
+
         aluguelDTO.ValorAluguel = ValorAluguel
         aluguelDTO.ValorMulta = ValorMulta
         aluguelDTO.KmEntrada = KmEntrada
-        aluguelDTO.KmSaida = KmSaida
+
         aluguelDTO.CodigoCli = CodigoCli
         aluguelDTO.CodigoVeic = CodigoVeic
 
