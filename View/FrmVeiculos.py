@@ -53,6 +53,10 @@ class Ui_frmVeiculos(object):
         descricao = self.txtDescricao.toPlainText()
         tipoVeiculo = self.edtTipo.text()
 
+        valorDiaria = valorDiaria.replace("R$","")
+        valorDiaria = valorDiaria.replace(".00","")
+        valorDiaria = valorDiaria.replace(" ","")
+        print(valorDiaria)
         # VERIFICA O ESTADO INSERIR/ALTERAR PARA CHAMAR A FUNÇAO APROPRIADA
         if estado == 'inserir':
             veiculo = VeiculoCTR

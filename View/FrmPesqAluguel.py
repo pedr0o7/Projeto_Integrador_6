@@ -19,21 +19,36 @@ class Ui_FrmPesqAluguel(object):
         dataDevol = self.edtDevolucao.text()
         valorMulta = self.edtMulta.text()
         kmSaida = self.edtSaida.text()
-        print("salve")
-        aluguel= AluguelCTR
-        aluguel.AluguelCTR.DevolverVeiculo(self, codigoAlug, dataDevol, valorMulta, kmSaida)
-        print("roia")
-        msg = QtWidgets.QMessageBox()
-        msg.setIcon(QtWidgets.QMessageBox.Information)
-        msg.setText("Veículo devolvido!")
-        msg.setWindowTitle("Devolver Veículo")
-        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
-        msg.exec_()
+        if dataDevol != '' :
+            if kmSaida != '':
+                aluguel= AluguelCTR
+                aluguel.AluguelCTR.DevolverVeiculo(self, codigoAlug, dataDevol, valorMulta, kmSaida)
+                
+                msg = QtWidgets.QMessageBox()
+                msg.setIcon(QtWidgets.QMessageBox.Information)
+                msg.setText("Veículo devolvido!")
+                msg.setWindowTitle("Devolver Veículo")
+                msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+                msg.exec_()
+
+            else:
+                msg = QtWidgets.QMessageBox()
+                msg.setIcon(QtWidgets.QMessageBox.Information)
+                msg.setText("Quilometragem inválida.")
+                msg.setWindowTitle("Cadastro de Aluguel")
+                msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+                msg.exec_()
+        else:
+            msg = QtWidgets.QMessageBox()
+            msg.setIcon(QtWidgets.QMessageBox.Information)
+            msg.setText("Data inválida.")
+            msg.setWindowTitle("Cadastro de Aluguel")
+            msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+            msg.exec_()
 
         self.edtDevolucao.setText('')
         self.edtMulta.setText('')
         self.edtSaida.setText('')
-
     def PesquisarAluguel(self, valor, tipo):
         if (valor == ''):
             self.PesquisarTodosAluguel()

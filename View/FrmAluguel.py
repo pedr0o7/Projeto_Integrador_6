@@ -16,27 +16,67 @@ class Ui_FrmAluguel(object):
         ValorAluguel = self.EdtValor.text()
         ValorMulta = self.EdtMulta.text()
         KmEntrada = self.EdtkmEntrada.text()
+        
+        if DataAluguel != '':
+            if DataPrazo != '':
+                if ValorAluguel != '':
+                    if ValorMulta != '':
+                        if KmEntrada != '':
+                            aluguel = AluguelCTR
+                            aluguel.CadastrarAluguel(self,DataAluguel, DataPrazo, ValorAluguel,
+                                        ValorMulta, KmEntrada, codigoCli, codigoVeic)
 
+                            msg = QtWidgets.QMessageBox()
+                            msg.setIcon(QtWidgets.QMessageBox.Information)
+                            msg.setText("Aluguel cadastrado com sucesso!")
+                            msg.setWindowTitle("Cadastro de  Aluguel")
+                            msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+                            msg.exec_()
 
-        aluguel = AluguelCTR
-        aluguel.CadastrarAluguel(self,DataAluguel, DataPrazo, ValorAluguel,
-                      ValorMulta, KmEntrada, codigoCli, codigoVeic)
-
-        msg = QtWidgets.QMessageBox()
-        msg.setIcon(QtWidgets.QMessageBox.Information)
-        msg.setText("Aluguel cadastrado com sucesso!")
-        msg.setWindowTitle("Cadastro de  Aluguel")
-        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
-        msg.exec_()
-
+                        else:
+                            msg = QtWidgets.QMessageBox()
+                            msg.setIcon(QtWidgets.QMessageBox.Information)
+                            msg.setText("Quilometragem inválida.")
+                            msg.setWindowTitle("Cadastro de Aluguel")
+                            msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+                            msg.exec_()
+                    else:
+                        msg = QtWidgets.QMessageBox()
+                        msg.setIcon(QtWidgets.QMessageBox.Information)
+                        msg.setText("Valor de Multa inválida.")
+                        msg.setWindowTitle("Cadastro de Aluguel")
+                        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+                        msg.exec_()
+                        
+                else:
+                    msg = QtWidgets.QMessageBox()
+                    msg.setIcon(QtWidgets.QMessageBox.Information)
+                    msg.setText("Valor de Aluguel inválida.")
+                    msg.setWindowTitle("Cadastro de Aluguel")
+                    msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+                    msg.exec_()   
+            else:
+                msg = QtWidgets.QMessageBox()
+                msg.setIcon(QtWidgets.QMessageBox.Information)
+                msg.setText("Data de Devolução inválida.")
+                msg.setWindowTitle("Cadastro de Aluguel")
+                msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+                msg.exec_()   
+        else:
+            msg = QtWidgets.QMessageBox()
+            msg.setIcon(QtWidgets.QMessageBox.Information)
+            msg.setText("Data do Aluguel inválida.")
+            msg.setWindowTitle("Cadastro de Aluguel")
+            msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+            msg.exec_()  
+        
+        
         self.EdtDataAluguel.setText('')
         self.EdtPrazo.setText('')
 
         self.EdtValor.setText('')
         self.EdtMulta.setText('')
         self.EdtkmEntrada.setText('')
-
-
 
     def PesquisarTodosClientes(self):
         cliente = ClienteCTR

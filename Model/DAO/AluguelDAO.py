@@ -71,18 +71,28 @@ class AluguelDAO:
 
         select = "SELECT Veiculo.CodigoVeic FROM Aluguel"\
                       " INNER JOIN Veiculo ON Aluguel.CodigoVeic_ = Veiculo.CodigoVeic"\
-                      " WHERE Aluguel.CodigoAlug = "+codigoAlug
+                     " WHERE Aluguel.CodigoAlug = "+codigoAlug
 
         query = QSqlQuery(select)
 
         while query.next():
             codigoVeic = str(query.value(0))
 
-        sql = "UPDATE Veiculo SET Alugado = 'Não' WHERE CodigoVeic_ = "+codigoVeic
+
+        sql = "UPDATE Veiculo SET Alugado = 'Não' WHERE CodigoVeic = "+codigoVeic
+        
         query.prepare(sql)
         query.exec_()
         db.commit()
 
+        print("KM=",aluguel.KmSaida)
+     
+        sql2 = "UPDATE Veiculo SET KmAtual = '"+aluguel.KmSaida\
+                +"'WHERE CodigoVeic = "+codigoVeic
+        
+        query.prepare(sql2)
+        query.exec_()
+        db.commit()
 
         sql = "UPDATE Aluguel SET DataDevolucao = '"+aluguel.DataDevolucao+"', ValorMulta = '"+aluguel.ValorMulta\
                       +"', KmSaida = '"+aluguel.KmSaida\
